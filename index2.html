@@ -940,10 +940,11 @@ body {
   position: absolute;
   top: 8%;
   left: 5%;
-  max-width: 30%;
-  z-index: 3; /* encima de todo */
+  max-width: 25%;
+  z-index: 3; 
   font-family: "Trebuchet MS", sans-serif;
   line-height: 1.4;
+  text-align: left;
 }
 
 .text-box h1,
@@ -966,11 +967,23 @@ body {
   font-size: 1.3rem;
 }
 
-/* Animación del degradado */
-@keyframes gradientText {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+/* 📱 Vista móvil */
+@media (max-width: 768px) {
+  .text-box {
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 90%;   /* ocupa casi todo el ancho del móvil */
+    text-align: center;
+  }
+
+  .text-box h1 {
+    font-size: 2rem;
+  }
+
+  .text-box p {
+    font-size: 1rem;
+  }
 }
 
 
